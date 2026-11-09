@@ -27,11 +27,11 @@
     VELOCITY_DISSIPATION: 0.35, // how fast motion settles
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: isSmall ? 12 : 20,
-    CURL: 14,                   // swirliness
-    SPLAT_RADIUS: 0.12,         // brush size
-    SPLAT_FORCE: 3000,
-    COLOR_INTENSITY: 0.1,      // keep low so text stays readable
-    POINTER_COLOR_BOOST: 0.8,
+    CURL: 24,                   // swirliness
+    SPLAT_RADIUS: 0.1,         // brush size
+    SPLAT_FORCE: 2000,
+    COLOR_INTENSITY: 0.4,      // keep low so text stays readable
+    POINTER_COLOR_BOOST: 1.4,
     IDLE_SPLAT_MS: 3200,         // gentle ambient splats when nobody is interacting
     
   };
@@ -417,7 +417,7 @@
   function randomSplats(n) {
     for (var i = 0; i < n; i++) {
       var c = nextColor();
-      splat(Math.random(), Math.random(), 900 * (Math.random() - 0.5), 900 * (Math.random() - 0.5), [c[0] * 1.5, c[1] * 1.5, c[2] * 1.5]);
+      splat(Math.random(), Math.random(), 900 * (Math.random() - 0.5), 900 * (Math.random() - 0.5), [c[0] * 3, c[1] * 3, c[2] * 3]);
     }
   }
 
